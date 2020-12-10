@@ -3,7 +3,7 @@
   font-family: serif;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
 body {
   margin: 0;
 }
@@ -15,10 +15,19 @@ body {
   position: relative;
 }
 
+.header {
+  display: none;
+}
+
 .header-logo {
   float: left;
   display: block;
   position: absolute;
+}
+
+.header-logo img {
+  width: 290px;
+  height: 150px;
 }
 
 nav {
@@ -410,4 +419,631 @@ footer p {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for SMART PHONE */
+
+
+@media screen and (max-width:768px) {
+  body {
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: url("https://raw.githubusercontent.com/JamesIsono/newjamesisono.github.io/main/image.png");
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+    header {
+    background-image: url("https://raw.githubusercontent.com/JamesIsono/newjamesisono.github.io/main/image.png");
+    width: 100%;
+    height: 650px;
+    position: relative;
+    display: none;
+  }
+  
+    /*------------------------------
+  
+    ここから下がハンバーガーメニュー
+    に関するCSS
+  
+  ------------------------------*/
+    
+  .header-logo-sp {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100px;
+    height: 20px;
+  }
+
+  .header-text-sp {
+    position: absolute;
+    font-size: 30px;
+    line-height: 50px;
+    left: 0%;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+  }
+
+  
+
+  /* チェックボックスは非表示に */
+  .drawer-hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;/* 重なり順を一番上に */
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 88%;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer-open span,
+  .drawer-open span:before,
+  .drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+
+  }
+  
+  /* 三本線のうち一番上の棒の位置調整 */
+  .drawer-open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線のうち一番下の棒の位置調整 */
+  .drawer-open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/* メニューを画面の外に飛ばす */
+    background: black;
+    transition: .5s;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+    left: 0;/* メニューを画面に入れる */
+  }
+
+  /* メニューを閉じるための要素のデザイン*/
+.drawer-close {
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 100%;/* 閉じるための要素を画面外へ */
+  z-index: 101;/* 重なり順をメニューより下に*/
+  transition: .5s;
+}
+
+#drawer-check:checked ~ .drawer-close {
+  left: 0;/* 閉じるための要素を画面内へ */
+}
+
+  .header-logo {
+    float: left;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    top: 660px;
+    z-index: 10;
+  }
+
+  .header-logo img {
+    width: 150px;
+    height: 80px;
+  }
+  
+  nav {
+    position: absolute;
+    left: 40%;
+    list-style: none;
+    display: flex;
+    display:none;
+  }
+  
+  nav ul li {
+    text-decoration: none;
+    float: left;
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 5px;
+  }
+  
+  .nav-top a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+  
+  .mail-top {
+    position: absolute;
+    top: 8px;
+    left: 86%;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 0, 0, 0.418);
+    padding: 10px;
+    display: none;
+  }
+  
+  .header-text {
+      width: 50%;                           /* 幅指定 */
+      display:  inline-block;                     /* インラインブロック指定 */
+      background-color: rgba(255, 255, 255, 0.6); /* 背景色指定 */
+      color: #222;                                /* 文字色指定 */
+      padding:  10px;                             /* 余白指定 */
+      box-sizing:  border-box;                    /* 崩れ防止 */
+      height: 200px;                              /* 高さ指定 */
+      position: absolute;
+      top: 900px;
+      z-index: 20;
+  }
+  
+  .header-text h1{
+    position: absolute;
+    font-size: 20px;
+    top: 10%;
+    left: 5%;
+    line-height: 150%;
+  }
+  
+  .header-text p {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    line-height: 150%;
+  }
+  
+  .details-container {
+    position: relative;
+    width: 100%;
+    height: 900px;
+  }
+  
+  .services .image {
+    position: absolute;
+    top: 100px;
+  }
+  
+  .services .text-box{
+    border-left: solid rgb(245, 113, 113);
+    padding-right: 200px;
+    padding-left: 30px;
+    position: absolute;
+    top: 400px;
+    left: 0%;
+    padding-bottom: 95px;
+    background: white;
+  }
+  
+
+  
+  .services .text-box h2 {
+    font-size: 25px;
+    padding-top: 30px;
+  }
+  
+  .english {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+  
+  .services .text-box p {
+    padding-top: 40px;
+  }
+  
+  .services a {
+    position: absolute;
+    top: 500px;
+    left: 65%;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    padding: 20px;
+    background: white;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .company .image {
+    position: absolute;
+    top: 700px;
+    left: 0%;
+  }
+  
+  .company .text-box{
+    border-left: solid rgb(245, 113, 113);
+    padding-top: 20px;
+    padding-right: 250px;
+    padding-left: 30px;
+    position: absolute;
+    top: 1000px;
+    left: 0%;
+    padding-bottom: 65px;
+    background: white;
+  }
+  
+
+  
+  .company .text-box h2 {
+    font-size: 25px;
+  }
+  
+  .english {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  .company .text-box p {
+    padding-top: 80px;
+  }
+  
+  .company a {
+    position: absolute;
+    top: 1220px;
+    left: 65%;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    padding: 20px;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .recruit-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .recruit-container .text-box {
+    position: absolute;
+    top: 470px;
+    left: 45%;
+  }
+  
+  .recruit-container h3 {
+    font-size: 25px;
+  }
+  
+  .recruit-container .f-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0%;
+    padding-top: 30px;
+  }
+  
+  .recruit-container .f-item {
+    padding-left: 30px;
+    position: relative;
+    top: 500px;
+  }
+  
+  .recruit-text {
+      width: 120px;                           /* 幅指定 */
+      display:  inline-block;                     /* インラインブロック指定 */
+      background-color: rgba(255, 255, 255, 0.6); /* 背景色指定 */
+      color: #222;                                /* 文字色指定 */
+      padding:  10px;                             /* 余白指定 */
+      box-sizing:  border-box;                    /* 崩れ防止 */
+      height: 80px;                              /* 高さ指定 */
+      top: 120px;
+      position: absolute;
+  }
+  
+  .work{
+    font-weight: normal;
+    line-height: 150%;
+  }
+  
+  .recruit-container a {
+    position: absolute;
+    top: 1120px;
+    left: 65%;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    padding: 20px;
+  }
+  
+  .info-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .info-container .text-box {
+    position: absolute;
+    top: 700px;
+    left: 45%;
+
+  }
+  
+  .info-container h5 {
+    font-size: 25px;
+  }
+  
+  .info-container .f-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 800px;
+    left: 2%;
+    
+  }
+  
+  .info-container .f-container .f-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px rgb(28, 28, 248);
+    font-weight: normal;
+    font-size: 12px;
+  }
+  
+  .info-container .f-container .f-item .info {
+    margin-left: 30px;
+    border-top: solid 1px rgb(171, 171, 250);
+    border-bottom: solid 1px rgb(171, 171, 250);
+    border-left: solid 1px rgb(171, 171, 250);
+    border-right: solid 1px rgb(171, 171, 250);
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(159, 159, 255, 0.555);
+  }
+  
+  .info-container .f-container .f-item .text {
+    padding-left: 30px;
+    margin-right: 100px;
+  }
+  
+  .info-container a {
+    position: absolute;
+    top: 1100px;
+    left: 65%;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    padding: 20px;
+  }
+  
+  .contact-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    top: 700px;
+    padding-top: 0px;
+    background-color: rgb(250, 245, 245);
+  }
+  
+  .contact-container .text-box{
+    position: absolute;
+    top: 50px;
+    left: 40%;
+  }
+  
+  .contact-container .text-box h6 {
+    font-size: 25px;
+  }
+  
+  .question {
+    text-align: center;
+    padding-top: 200px;
+    position: absolute;
+    top: 0px;
+    left: 4%;
+    font-size: 15px;
+  }
+  
+  .number {
+    position: absolute;
+    font-size: 20px;
+    left: 8%;
+    top: 350px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: solid 1px rgb(146, 146, 146);
+  }
+  
+  .number p {
+    font-size: 15px;
+    padding-top: 30px;
+    padding-left: 10px;
+  }
+  
+  .mail-bottom a{
+    position: absolute;
+    left: 63%;
+    top: 370px;
+    font-size: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: rgb(253, 61, 61);
+    padding: 15px 30px 15px 30px;
+    border-top: solid 1px red;
+    border-bottom: solid 1px red;
+    border-right: solid 1px red;
+    border-left: solid 1px red;
+  }
+  
+  footer {
+    position: relative;
+    width: 100%;
+    top: 700px;
+  }
+  
+  .nav-bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    list-style: none;
+  }
+  
+  .nav-bottom li:not(:last-child){
+    border-right: solid 1px rgb(187, 183, 183);
+  }
+  
+  .nav-bottom-list a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding-right: 30px;
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  
+  .footer-logo {
+    position: absolute;
+    left: 24%;
+    margin-top: 50px;
+
+  }
+  
+  footer p {
+    position: absolute;
+    left: 38%;
+    top: 200px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
